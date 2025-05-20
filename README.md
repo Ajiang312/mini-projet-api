@@ -2,7 +2,7 @@
 
 Ce projet consiste à développer une mini API en **FastAPI**, déployée sur **Google Cloud Run** via **Docker**, avec :
 
-- Lecture/écriture de données sur **Google Cloud Storage**
+- Lecture et écriture de données sur **Google Cloud Storage**
 - Génération de blagues aléatoires via **Vertex AI (Gemini)**
 - API exposée publiquement via des endpoints simples
 
