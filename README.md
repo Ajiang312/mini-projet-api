@@ -48,4 +48,4 @@ Le tout est containerisé avec Docker et déployé via *Cloud Run* sur *Google C
 ### 1. Installer les dépendances
 ```bash
 pip install -r requirements.txt
->>>>>>> 7f0b0bb3d0b61b60e1c4d8fcb3e9bfabc143f173
+
