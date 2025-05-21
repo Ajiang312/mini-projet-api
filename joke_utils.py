@@ -1,3 +1,4 @@
+
 import vertexai
 from vertexai.preview.generative_models import GenerativeModel
 import os
@@ -15,3 +16,5 @@ def get_ai_joke():
     chat = model.start_chat()
     response = chat.send_message("Raconte-moi une blague drôle en français.")
     return response.text
+
+
