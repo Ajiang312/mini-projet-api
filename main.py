@@ -5,6 +5,12 @@ from gcs_utils import read_from_gcs, write_to_gcs
 from joke_utils import get_ai_joke
 import os
 
+from pydantic import BaseModel
+
+class DataEntry(BaseModel):
+    prenom: str
+    email: str
+
 # Charger les variables d’environnement
 load_dotenv()
 
@@ -24,9 +30,9 @@ def get_data():
     return data
 
 @app.post("/data")
-async def post_data(request: Request):
-    payload = await request.json()
-    return write_to_gcs(payload)
+def post_data(entry: DataEntry):
+    return write_to_gcs(entry.dict())
+
 
 @app.get("/joke")
 def joke():
